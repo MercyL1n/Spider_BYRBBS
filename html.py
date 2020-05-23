@@ -22,6 +22,12 @@ def load_html_head(tempfile=CONF.get("filepath", "joblist_template_head")):
     return head
 
 
+def save_comment_result(html, file=CONF.get("filepath", "comment_result_html")):
+    with open(file, "w") as f:
+        f.write(html)
+        f.close()
+
+
 def save_result(html, file=CONF.get("filepath", "joblist_result_html")):
     with open(file, "w") as f:
         f.write(html)
